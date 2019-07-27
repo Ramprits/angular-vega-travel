@@ -9,7 +9,10 @@ import { NewVehicleComponent } from './vehicle/new-vehicle/new-vehicle.component
 import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, RouterModule.forRoot([])],
+  imports: [BrowserModule, FormsModule, RouterModule.forRoot([
+    { path: '', component: VehicleComponent },
+    { path: 'new-vehicle', component: NewVehicleComponent },
+  ])],
   declarations: [AppComponent, VehicleComponent, NewVehicleComponent, NavbarComponent],
   bootstrap: [AppComponent]
 })
