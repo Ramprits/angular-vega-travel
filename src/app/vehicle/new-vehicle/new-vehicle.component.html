@@ -13,9 +13,9 @@
 		        {{m.name}}
 		      </option>
 		    </select>
-		  </div>
-		</div>
-				</div>
+		    </div>
+		    </div>
+	    </div>
 		
 				<div class="column ">
 		<div class="control">
@@ -33,21 +33,22 @@
 			<div class="field">
 				<label class="label">Name</label>
 		  <div class="control">
-		    <input class="input" type="text" placeholder="e.g Alex Smith">
+		    <input class="input" [(ngModel)]="name" name="name" type="text" placeholder="e.g Alex Smith">
 		  </div>
 		</div>
 		
 		<div class="field">
 		  <label class="label">Email</label>
 		  <div class="control">
-		    <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com">
+		    <input class="input" [(ngModel)]="email" name="email" email required type="email" placeholder="e.g. alexsmith@gmail.com">
 		  </div>
+
 		</div>
 		
 		<div class="field">
 		  <label class="label">Phone</label>
 		  <div class="control">
-		    <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com">
+		    <input class="input" [(ngModel)]="phone" name="phone" type="number" placeholder="e.g. +919867405720">
 		  </div>
 		</div>
 		
