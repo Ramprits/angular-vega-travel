@@ -1,62 +1,65 @@
 <div class="columns">
 	<div class="column is-6 is-offset-3">
-		<section class="box">
-			<div class="columns">
+		<form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+
+			<section class="box">
+				<div class="columns">
+					<div class="column ">
+						<div class="control">
+							<div class="select">
+								<select (change)="onChange()" [(ngModel)]="vehicle.make" name="make">
+		      <option>Select Make</option>
+		      <option [value]="m.id" *ngFor="let m of makes" >
+		        {{m.name}}
+		      </option>
+		    </select>
+		  </div>
+		</div>
+				</div>
+		
 				<div class="column ">
-					<div class="control">
-						<div class="select">
-							<select (change)="onChange()" [(ngModel)]="vehicle.make" name="make">
-      <option>Select Make</option>
-      <option [value]="m.id" *ngFor="let m of makes" >
-        {{m.name}}
-      </option>
-    </select>
-  </div>
-</div>
+		<div class="control">
+		  <div class="select">
+		    <select  name="model" [(ngModel)]="vehicle.model">
+		      <option>Select Model</option>
+		      <option [value]="m.id" *ngFor="let m of models" >
+		        {{m.name}}
+		      </option>
+		    </select>
+		  </div>
 		</div>
-
-		<div class="column ">
-<div class="control">
-  <div class="select">
-    <select  name="model">
-      <option>Select Model</option>
-      <option [value]="m.id" *ngFor="let m of models" >
-        {{m.name}}
-      </option>
-    </select>
-  </div>
-</div>
+				</div>
+			</div>
+			<div class="field">
+				<label class="label">Name</label>
+		  <div class="control">
+		    <input class="input" type="text" placeholder="e.g Alex Smith">
+		  </div>
 		</div>
-	</div>
-	<div class="field">
-		<label class="label">Name</label>
-  <div class="control">
-    <input class="input" type="text" placeholder="e.g Alex Smith">
-  </div>
-</div>
-
-<div class="field">
-  <label class="label">Email</label>
-  <div class="control">
-    <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com">
-  </div>
-</div>
-
-<div class="field">
-  <label class="label">Phone</label>
-  <div class="control">
-    <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com">
-  </div>
-</div>
-
-
-<div class="field">
-  <p class="control">
-    <button class="button is-success">
-      Save
-    </button>
-  </p>
-</div>
-</section>
+		
+		<div class="field">
+		  <label class="label">Email</label>
+		  <div class="control">
+		    <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com">
+		  </div>
+		</div>
+		
+		<div class="field">
+		  <label class="label">Phone</label>
+		  <div class="control">
+		    <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com">
+		  </div>
+		</div>
+		
+		
+		<div class="field">
+		  <p class="control">
+		    <button type="submit" class="button is-success">
+		      Save
+		    </button>
+		  </p>
+		</div>
+		</section>
+  </form>
   </div>
 </div>

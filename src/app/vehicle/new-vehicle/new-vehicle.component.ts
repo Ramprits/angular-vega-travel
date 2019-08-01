@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { VehicleService } from '../../services/vehicle.service';
 @Component({
   selector: 'app-new-vehicle',
@@ -23,5 +24,9 @@ export class NewVehicleComponent implements OnInit {
     var selectedMake = this.makes.find(m => m.id == this.vehicle.make);
     this.models = selectedMake ? selectedMake.models : [];
     console.log(this.models)
+  }
+
+  onSubmit(formData: NgForm) {
+    console.log(formData)
   }
 }
