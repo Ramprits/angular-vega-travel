@@ -1,3 +1,6 @@
 /* Add application styles & imports to this file! */
 
 @import 'bulma/css/bulma.css';
+.box{
+  box-shadow:  1px 1px 1px 1px #888888;
+}

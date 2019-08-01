@@ -9,6 +9,7 @@ import { VehicleComponent } from './vehicle/vehicle.component';
 import { NewVehicleComponent } from './vehicle/new-vehicle/new-vehicle.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { VehicleService } from './services/vehicle.service';
+import { ToursService } from './services/tours.service';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, HttpClientModule, RouterModule.forRoot([
@@ -17,6 +18,6 @@ import { VehicleService } from './services/vehicle.service';
   ])],
   declarations: [AppComponent, VehicleComponent, NewVehicleComponent, NavbarComponent],
   bootstrap: [AppComponent],
-  providers: [VehicleService]
+  providers: [VehicleService, ToursService]
 })
 export class AppModule { }
